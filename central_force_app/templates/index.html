@@ -21,8 +21,57 @@
 {% block contents %}
   <div class="content">
     <h1>Central force motion</h1>
-    <p>
+
+    <h2>Of Newton and Coulomb</h1>
+    <p>Newton's law of universal gravitation posits that two punctal objects
+      $P_0$ and $P_1$ of mass $m_0$ and $M_1$ are subject to a central attractive force exerted on
+      each other:
+      $$
+      \mathbf{F}_{0\rightarrow 1} = -\frac{m_0 m_1 G}{\lVert \mathbf{r} \rVert^2} \frac{\mathbf{r}}{\lVert \mathbf{r}\rVert}
+      $$
+      where $G$ is the universal gravitational constant and
+      $\mathbf{r}=\overrightarrow{P_0 P_1}$. This governs the motion of stars and planets
+      (in the non-relativistic limit).
     </p>
+    <p>
+      Similarly, Coulomb's law states that a similar interaction applies if the
+      punctual objects bear electrical charges $q_0$ and $q_1$ instead of a mass, which is called
+      electrostatic force:
+      $$
+      \mathbf{F}_{0\rightarrow 1} = \frac{q_0 q_1 k}{\lVert \mathbf{r} \rVert^2} \frac{\mathbf{r}}{\lVert \mathbf{r}\rVert}
+      $$
+      where $k$ is the Coulomb's constant.
+    </p>
+
+    <p>
+      To summarize, two of the fundamental forces in physics share the same
+      property: their magnitude is invertly proportional to the squre of the
+      distance between the two objects.
+    </p>
+
+    <h2>What if...</h1>
+    <p>
+      ... the laws of physics were different? Instead of the square, what if
+      the fundamental forces relies on another exponent $\alpha$? What if their
+      magnitude were decreasing with distance instead ($\alpha$>0)? Constant
+      ($\alpha=0$)?
+    </p>
+    <p>
+      The below shows simulated trajectories in the case of gravitation, under
+      a central force of magnitude proportional to $m_0 m_1 \lVert \mathbf{r}\Vert^\alpha$,
+      as derived from the Netwon's law of dynamic.
+    </p>
+    <p>
+      In particular, check out the values $\alpha=1$ and $\alpha=-2$; these are the only
+      values that can generate closed trajectories. For other values, see how the trajectory
+      evolves in complex, interlaced patterns.
+    </p>
+    <p>
+      Note the slightly chaotic nature of the system : in the Newtonian case
+      $\alpha=-2$, the trajectories may not be closed and exhibits high sensitivity
+      to the initial conditions. Use preferably the DOP853 solver for stability.
+    </p>
+
 
     {{ super() }}
 

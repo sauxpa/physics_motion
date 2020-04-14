@@ -7,11 +7,13 @@ class Particle():
                  mass: float = 1.0,
                  mass_attractive_center: float = 1.0,
                  n_steps_ode: int = int(1e3),
-                 exponent: float=-2.0,
+                 exponent: float = -2.0,
+                 solver_method: str = 'RK45',
                  ) -> None:
         self._mass = mass
         self._mass_attractive_center = mass_attractive_center
         self._exponent = exponent
+        self._solver_method = solver_method
         self._n_steps_ode = n_steps_ode
 
         # For later caching
@@ -44,6 +46,14 @@ class Particle():
     @exponent.setter
     def exponent(self, new_exponent: float) -> None:
         self._exponent = new_exponent
+
+    @property
+    def solver_method(self) -> str:
+        return self._solver_method
+
+    @solver_method.setter
+    def solver_method(self, new_solver_method: str) -> None:
+        self._solver_method = new_solver_method
 
     @property
     def n_steps_ode(self) -> int:
@@ -95,6 +105,7 @@ class Particle():
             self._motion_ode,
             (0.0, T),
             [self._r0, self._drdt0, self._theta0],
+            method=self.solver_method,
             t_eval=np.linspace(0.0, T, self.n_steps_ode),
         )
 
