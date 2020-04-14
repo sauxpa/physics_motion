@@ -13,6 +13,11 @@ Newton's law of universal gravitation posits that the gravitational interaction 
 <img src="./central_force_app_example.png"
      alt="central_force_example"
      style="float: left; margin-right: 10px;" />
+     
+### Particle trajectory for varying exponent 
+<img src="./varying_exponent.gif"
+     alt="varying_exponent"
+     style="float: left; margin-right: 10px;" />
 
 ## Gravitation inversely proportional to distance
 
