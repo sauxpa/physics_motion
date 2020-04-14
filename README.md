@@ -5,6 +5,14 @@
 * run bokeh serve --show central_force_app/
 
 Newton's law of universal gravitation posits that the gravitational interaction between two punctual masses is inversely proportional to the square of their Euclidean distance. This app helps you explore what would the trajectory look like if the laws of physics would change!
+ 
+<img src="./central_force_app_text.png"
+     alt="central_force_text"
+     style="float: left; margin-right: 10px;" />
+
+<img src="./central_force_app_example.png"
+     alt="central_force_example"
+     style="float: left; margin-right: 10px;" />
 
 ## Gravitation inversely proportional to distance
 
